@@ -46,16 +46,7 @@
             </field>
         </record>
 
-        <record id="stock_move_line_branch_view_form" model="ir.ui.view" >
-            <field name="name">stock.move.line.inherit.form</field>
-            <field name="model">stock.move.line</field>
-            <field name="inherit_id" ref="stock.view_move_line_form" />
-            <field name="arch" type="xml">
-                <field name="product_id" position="after">
-                    <field name="branch_id"/>
-                </field>
-            </field>
-        </record>
+     
 
         <record id="account_move_line_branch_view_tree2" model="ir.ui.view" >
             <field name="name">account.move.line.inherit.tree2</field>
@@ -103,17 +94,6 @@
             </field>
         </record>
 
-
-        <record id="stock_view_move_line_tree_inherit_branch" model="ir.ui.view">
-            <field name="name">stock.view.move.line.tree.inherit.branch</field>
-            <field name="model">stock.move.line</field>
-            <field name="inherit_id" ref="stock.view_move_line_tree"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='product_id']" position="after">
-                    <field name="branch_id" attrs="{'readonly' : [('state', '!=' , 'draft')]}"/>
-                </xpath>
-            </field>
-        </record>
 
         <record id="view_move_line_order_filter_inherit_branch11" model="ir.ui.view">
             <field name="name">move.line.filter.inherit.branch</field>
